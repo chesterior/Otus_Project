@@ -19,6 +19,7 @@ public class TestingPage {
     }
 
     private static final By CARDS_COURSES = By.xpath(".//div[@class='sc-18q05a6-1 bwGwUO']//a");
+    private static final By CARD_QA_ENGINEER = By.xpath(".//div[text()='QA Engineer. Basic']");
 
     @Step("Проверка количества карточек курсов")
     public TestingPage checkCountCards() {
@@ -31,6 +32,14 @@ public class TestingPage {
                 .count();
         Assertions.assertEquals(10, visibleElementsCount,
                 "Количество видимых элементов не соответствует ожидаемому.");
+        return this;
+    }
+
+    @Step("Клик по карточке курса 'QA Engineer. Basic'")
+    public TestingPage clickCourseCard() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement testingButton = wait.until(ExpectedConditions.visibilityOfElementLocated(CARD_QA_ENGINEER));
+        testingButton.click();
         return this;
     }
 }
