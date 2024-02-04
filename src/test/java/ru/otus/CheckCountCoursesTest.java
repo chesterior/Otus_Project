@@ -17,7 +17,7 @@ public class CheckCountCoursesTest extends TestBase {
     }
 
     @Test
-    public void test() {
+    public void checkCountCoursesTest() {
         mainPage.open();
         mainPage.clickTesting();
         testingPage.checkCountCards();

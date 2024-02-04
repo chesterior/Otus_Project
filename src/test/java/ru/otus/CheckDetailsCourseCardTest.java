@@ -20,7 +20,7 @@ public class CheckDetailsCourseCardTest extends TestBase {
     }
 
     @Test
-    public void test() {
+    public void checkDetailsCourseCardTest() {
         mainPage.open();
         mainPage.clickTesting();
         testingPage.clickCourseCard();
