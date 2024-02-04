@@ -21,6 +21,7 @@ public class TestBase {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver", "/Users/a.safronov/Downloads/chromedriver-mac-arm64/chromedriver");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
