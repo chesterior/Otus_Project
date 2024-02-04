@@ -17,11 +17,9 @@ public class CheckCountCoursesTest extends TestBase {
     }
 
     @Test
-    public void test() throws InterruptedException {
+    public void test() {
         mainPage.open();
-        Thread.sleep(10000);
         mainPage.clickTesting();
-        Thread.sleep(10000);
         testingPage.checkCountCards();
     }
 }
