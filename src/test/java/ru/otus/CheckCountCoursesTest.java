@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import ru.otus.pages.MainPage;
 import ru.otus.pages.TestingPage;
 
+import static ru.otus.pages.MainPage.TESTING_BUTTON;
+
 public class CheckCountCoursesTest extends TestBase {
     private MainPage mainPage;
     private TestingPage testingPage;
@@ -18,8 +20,8 @@ public class CheckCountCoursesTest extends TestBase {
 
     @Test
     public void checkCountCoursesTest() {
-        mainPage.open();
-        mainPage.clickTesting();
+        mainPage.open(PAGE_URL);
+        mainPage.clickSection(TESTING_BUTTON);
         testingPage.checkCountCards();
     }
 }

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import ru.otus.pages.EventsPage;
 import ru.otus.pages.MainPage;
 
+import static ru.otus.pages.MainPage.EVENTS_BUTTON;
+
 public class CheckingDateOfFutureEventsTest extends TestBase {
     private MainPage mainPage;
     private EventsPage eventsPage;
@@ -18,8 +20,8 @@ public class CheckingDateOfFutureEventsTest extends TestBase {
 
     @Test
     public void eventsSortingTest() {
-        mainPage.open();
-        mainPage.clickEvents();
+        mainPage.open(PAGE_URL);
+        mainPage.clickSection(EVENTS_BUTTON);
         eventsPage.eventVerificationDateGreaterOrEqualCurrentOne();
     }
 }
